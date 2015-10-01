@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+
+        <title>Project 1: Sliding 15 puzzle</title>
+        <style>
+        
+            html, body {
+                height: 100%;
+                bottom-margin:10%;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 14px;
+                overflow: hidden;
+            }
+            
+            
+            article {
+                text-align: center;
+                overflow: hidden;
+                margin-top:10%;
+                margin-right: 10%;
+                margin-left: 10%;
+            }
+            
+            h1 {
+                background: #fc5;
+                border-radius: 15px;
+                padding: 1em;
+                font-size: 12px;
+            }
+            
+            p {
+                font-size: 10px;
+            }
+            
+            .clear {
+                clear: both;
+            }
+            
+            section {
+                width: 45%;
+                float: left;
+                margin-left: 5%;
+                overflow: auto;
+               
+            }
+             
+            button {
+                display: inline-block;
+                width: 100%;
+            }
+            
+            #container{
+                padding-bottom: 70%;
+                float: left;
+            }
+           
+            
+            .tile {
+                width: 25%;
+                padding-bottom: 25%;
+                color: #fff;
+                position: relative;
+                float: left;
+                overflow: hidden; 
+            }
+            
+            .image {
+                position: absolute;
+                left: 1px;
+                top: 1px;
+                background: #fcf;
+                width: 400%;
+                height: 400%;
+                
+            }
+            #roundbg{
+                background: #FFE7BA    ;
+                padding-top: 1%;
+                border-radius: 15px;
+                margin: 3%;
+            }
+            
+  
+            #buttons{
+                padding-top: 2%;
+                width: 50%;
+                margin: auto;
+            }
+            
+            
+           
+            
+
+        </style>
+    </head>
+    <body>
+        <script src="p1.js"></script> 
+        <div id="roundbg">
+        <article>
+            <section>
+                <div id="container">
+                    <h1 id="score">You've taken 0 moves in the Sliding Puzzle Game</h1>
+                    <p> Complete the puzzle by clicking or using your keyboard arrow keys to move the puzzle peices into their right location and forming the complete image! Hint: to see the full image click and drag.</p>
+                    <div id="buttons">
+                        <button id="reset" onclick="shuffleTiles()">Reset Puzzle</button>
+                        <button id="imageButton" onclick="shuffleTiles()">Random Image</button>
+                        <div class="clear"></div>
+
+                    </div>
+                </div>
+            </section>
+
+            <div id="puzzle">
+                
+                <section>
+                    <div class ="tile" id="00" onclick="tileClicked(event);">
+                        <img src="duck.jpg" class="image" style="top: 0%; left:0%;">
+                    </div>
+                    <div class ="tile" id="01" onclick="tileClicked(event);">
+                        <img src="duck.jpg" class="image" style="top:0%; left:-100%;">
+                    </div>
+
+                    <div class ="tile" id="02" onclick="tileClicked(event);">
+                        <img src="duck.jpg" class="image" style="top:0%; left:-200%;">
+                    </div>
+                    <div class ="tile" id="03" onclick="tileClicked(event);">
+                        <img src="duck.jpg" class="image" style="top:0%; left:-300%;">
+                    </div>
+                    <div class="clear"></div>
+                </section>
+
+                <section>
+                    <div class ="tile" id="10" onclick="tileClicked(event);">
+                        <img src="duck.jpg" class="image" style=" top:-100%; left:0%;">
+                    </div>
+                    <div class ="tile" id="11" onclick="tileClicked(event);">
+                        <img src="duck.jpg" class="image" style="top:-100%; left:-100%;">
+                    </div>
+
+                    <div class ="tile" id="12" onclick="tileClicked(event);">
+                        <img src="duck.jpg" class="image" style="top:-100%; left:-200%;">
+                    </div>
+                    <div class ="tile" id="13" onclick="tileClicked(event);">
+                        <img src="duck.jpg" class="image" style="top:-100%; left:-300%;">
+                    </div>
+                    <div class="clear"></div>
+                </section>
+
+                <section>
+                    <div class ="tile" id="20" onclick="tileClicked(event);">
+                        <img src="duck.jpg" class="image" style="top:-200%; left:0%;">
+                    </div>
+                    <div class ="tile" id="21" onclick="tileClicked(event);">
+                        <img src="duck.jpg" class="image" style="top:-200%; left:-100%;">
+                    </div>
+
+                    <div class ="tile" id="22" onclick="tileClicked(event);">
+                        <img src="duck.jpg" class="image" style="top:-200%; left:-200%;">
+                    </div>
+                    <div class ="tile" id="23" onclick="tileClicked(event);">
+                        <img src="duck.jpg" class="image" style="top:-200%; left:-300%;">
+                    </div>
+                    <div class="clear"></div>
+                </section>
+
+                <section>
+                    <div class ="tile" id="30" onclick="tileClicked(event);">
+                        <img src="duck.jpg" class="image" style="top:-300%; left:0%;">
+                    </div>
+                    <div class ="tile" id="31" onclick="tileClicked(event);">
+                        <img src="duck.jpg" class="image" style="top:-300%; left:-100%;">
+                    </div>
+
+                    <div class ="tile" id="32" onclick="tileClicked(event);">
+                        <img src="duck.jpg" class="image" style="top:-300%; left:-200%;">
+                    </div>
+                    
+                    <div class="tile" id="33" onclick="tileClicked(event);">
+                        <img src="duck.jpg" class="image" style="top:-300%; left:-300%; visibility:hidden">
+                    </div>
+
+                    <div class="clear"></div>
+                </section>
+            </div>
+
+        </article>
+
+       </div> 
+        
+    </body>
+</html>
